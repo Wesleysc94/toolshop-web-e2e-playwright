@@ -1,0 +1,16 @@
+{
+  "name": "toolshop-web-e2e-playwright",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Primeira suite de automacao web com Playwright para o ecossistema Practice Software Testing.",
+  "scripts": {
+    "test:smoke": "playwright test --grep @smoke",
+    "test:negative": "playwright test --grep @negative",
+    "test:all": "playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
+

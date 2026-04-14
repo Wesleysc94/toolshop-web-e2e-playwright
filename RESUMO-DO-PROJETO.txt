@@ -1,0 +1,57 @@
+TOOLSHOP WEB E2E PLAYWRIGHT - RESUMO DO PROJETO
+
+O QUE E ESTE REPOSITORIO
+
+Este projeto apresenta a primeira etapa de automacao web com Playwright para o ecossistema Practice Software Testing.
+
+OBJETIVO
+
+Registrar de forma clara:
+
+- quais fluxos foram priorizados
+- como a suite foi organizada
+- o que foi validado
+- qual foi o resultado da primeira rodada
+
+ESCOPO DESTA ETAPA
+
+- home
+- busca por produto
+- detalhe de produto
+- login e logout
+- erro de login
+- carrinho
+- checkout
+
+O QUE FOI EXECUTADO
+
+Em 2026-04-14, foi executada a primeira rodada automatizada da aplicacao web.
+
+PRINCIPAIS RESULTADOS
+
+- 4 testes smoke passaram
+- 1 teste negativo passou
+- 5 testes passaram no total
+- a busca funcionou como esperado
+- o detalhe de produto carregou com informacoes principais
+- o login e o logout funcionaram
+- a mensagem de erro de login foi exibida corretamente
+- o checkout foi concluido com sucesso no fluxo feliz
+
+COMO VALIDAR O PROJETO
+
+- instalar as dependencias do projeto
+- rodar `npm run test:smoke`
+- rodar `npm run test:negative`
+- conferir o relatorio e as evidencias da rodada
+
+ARQUIVOS PRINCIPAIS
+
+- README.md
+- docs/guia-de-revisao.md
+- docs/guia-de-revisao.txt
+- tests/smoke/home-search.spec.ts
+- tests/smoke/authentication.spec.ts
+- tests/smoke/checkout.spec.ts
+- execution-reports/2026-04-14-rodada-smoke-web-01.md
+- execution-reports/2026-04-14-rodada-smoke-web-01.txt

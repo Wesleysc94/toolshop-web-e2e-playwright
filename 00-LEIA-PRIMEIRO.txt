@@ -1,0 +1,38 @@
+TOOLSHOP WEB E2E PLAYWRIGHT - LEITURA INICIAL
+
+Este arquivo apresenta uma visao rapida do projeto.
+
+VISAO GERAL
+
+- A base principal da etapa esta pronta.
+- A primeira suite web com Playwright ja foi criada.
+- A rodada inicial foi executada contra a aplicacao real.
+- O projeto cobre smoke e um cenario negativo de autenticacao.
+- O resultado atual da rodada e de 5 testes aprovados.
+
+ORDEM DE LEITURA SUGERIDA
+
+1. RESUMO-DO-PROJETO.txt
+   Apresenta a visao geral da etapa em leitura curta.
+
+2. README.md
+   Mostra objetivo, escopo, estrutura e status atual.
+
+3. execution-reports\2026-04-14-rodada-smoke-web-01.md
+   Resume a primeira execucao automatizada.
+
+4. tests\smoke\home-search.spec.ts
+   Mostra a cobertura principal da navegacao e busca.
+
+5. tests\smoke\authentication.spec.ts
+   Mostra autenticacao e validacao negativa inicial.
+
+6. tests\smoke\checkout.spec.ts
+   Mostra o fluxo feliz de carrinho e checkout.
+
+COMO VALIDAR O PROJETO
+
+- A aplicacao testada e publica.
+- Os comandos de execucao estao descritos no README.
+- O relatorio da rodada registra o resultado observado.
+- As evidencias da execucao estao organizadas na pasta evidence.

@@ -1,0 +1,10 @@
+
+> toolshop-web-e2e-playwright@0.1.0 test:negative
+> playwright test --grep @negative
+
+
+Running 1 test using 1 worker
+
+  ok 1 tests\smoke\authentication.spec.ts:16:5 › @negative login invalido exibe mensagem de erro (4.8s)
+
+  1 passed (10.8s)

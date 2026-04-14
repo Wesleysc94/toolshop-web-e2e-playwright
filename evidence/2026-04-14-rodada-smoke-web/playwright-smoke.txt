@@ -1,0 +1,13 @@
+
+> toolshop-web-e2e-playwright@0.1.0 test:smoke
+> playwright test --grep @smoke
+
+
+Running 4 tests using 1 worker
+
+  ok 1 tests\smoke\authentication.spec.ts:5:5 › @smoke login e logout funcionam com a conta demo (8.1s)
+  ok 2 tests\smoke\checkout.spec.ts:5:5 › @smoke checkout feliz pode ser concluido (15.5s)
+  ok 3 tests\smoke\home-search.spec.ts:5:5 › @smoke busca por texto retorna produtos coerentes (4.4s)
+  ok 4 tests\smoke\home-search.spec.ts:23:5 › @smoke detalhe de produto exibe informacoes principais (4.5s)
+
+  4 passed (39.9s)
