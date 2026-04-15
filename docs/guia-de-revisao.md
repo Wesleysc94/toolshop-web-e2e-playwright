@@ -4,7 +4,7 @@
 
 Este repositorio apresenta a primeira etapa de automacao web com Playwright do ecossistema **Practice Software Testing**.
 
-O foco aqui e mostrar:
+O foco aqui e registrar:
 
 - quais fluxos entraram na primeira fase
 - como a suite foi organizada
@@ -49,3 +49,9 @@ As validacoes de autenticacao usam a conta demo oficial:
 
 - email: `customer@practicesoftwaretesting.com`
 - senha: `welcome01`
+
+## Navegacao do portfolio
+
+- portfolio principal: https://github.com/Wesleysc94/Wesleysc94
+- hub do Case Study 1: https://github.com/Wesleysc94/toolshop-quality-portfolio
+- Case Study 2: https://github.com/Wesleysc94/swaglab-quality-suite

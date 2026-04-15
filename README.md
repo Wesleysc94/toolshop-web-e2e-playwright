@@ -6,13 +6,14 @@
 [![Testes](https://img.shields.io/badge/Testes-5%20aprovados-brightgreen)]()
 [![Produto](https://img.shields.io/badge/Produto-Practice%20Software%20Testing-blue)](https://practicesoftwaretesting.com/)
 
-📦 **Parte do portfolio:** [toolshop-quality-portfolio](https://github.com/Wesleysc94/toolshop-quality-portfolio)
+🔎 **Portfolio principal:** [Wesleysc94](https://github.com/Wesleysc94/Wesleysc94)
+📦 **Case Study 1:** [toolshop-quality-portfolio](https://github.com/Wesleysc94/toolshop-quality-portfolio)
 
 ---
 
 ## Objetivo
 
-Automatizar os fluxos críticos de usuário da aplicação Practice Software Testing, validando que as funcionalidades essenciais (busca, autenticação, checkout) funcionam corretamente de ponta a ponta.
+Automatizar fluxos críticos de usuário na aplicação Practice Software Testing, validando que funcionalidades essenciais funcionam corretamente de ponta a ponta.
 
 ---
 
@@ -25,9 +26,9 @@ Automatizar os fluxos críticos de usuário da aplicação Practice Software Tes
 
 ---
 
-## Cobertura de testes
+## Escopo
 
-### Smoke (4 testes)
+### Smoke
 
 | # | Cenário | Status |
 |---|---|---|
@@ -36,21 +37,25 @@ Automatizar os fluxos críticos de usuário da aplicação Practice Software Tes
 | 3 | Login e logout com conta demo oficial | ✅ |
 | 4 | Checkout completo até confirmação de pagamento | ✅ |
 
-### Negativo (1 teste)
+### Cenário negativo
 
 | # | Cenário | Status |
 |---|---|---|
 | 5 | Mensagem de erro ao tentar login com credenciais inválidas | ✅ |
 
-### Resultado da rodada (2026-04-14)
+---
+
+## Resultado da rodada
 
 ```
   5 testes executados
   5 aprovados
   0 falhas
-  ────────────────
+  ----------------
   Taxa de aprovação: 100%
 ```
+
+Rodada registrada em 2026-04-14.
 
 ---
 
@@ -58,9 +63,9 @@ Automatizar os fluxos críticos de usuário da aplicação Practice Software Tes
 
 | Ferramenta | Uso |
 |---|---|
-| **Playwright** | Framework de automação web E2E |
-| **TypeScript** | Linguagem dos testes (tipagem forte) |
-| **npm** | Gerenciador de pacotes |
+| **Playwright** | framework de automação web E2E |
+| **TypeScript** | linguagem dos testes |
+| **npm** | gerenciamento de dependências e scripts |
 
 ---
 
@@ -69,79 +74,40 @@ Automatizar os fluxos críticos de usuário da aplicação Practice Software Tes
 **Pré-requisitos:** Node.js 18+ instalado.
 
 ```bash
-# 1. Clone o repositório
 git clone https://github.com/Wesleysc94/toolshop-web-e2e-playwright.git
 cd toolshop-web-e2e-playwright
 
-# 2. Instale as dependências
 npm install
-
-# 3. Instale os navegadores do Playwright
 npx playwright install
 
-# 4. Execute os testes
-npm run test:smoke       # Roda os testes smoke
-npm run test:negative    # Roda os testes negativos
-npm run test:all         # Roda tudo
+npm run test:smoke
+npm run test:negative
+npm run test:all
 ```
 
 **Comandos úteis:**
 
 ```bash
-npx playwright test --headed    # Executa com navegador visível
-npx playwright test --ui        # Abre a interface gráfica do Playwright
-npm run report                  # Abre o relatório HTML da última execução
+npx playwright test --headed
+npx playwright test --ui
+npm run report
 ```
-
----
-
-## Estrutura do repositório
-
-```
-toolshop-web-e2e-playwright/
-├── README.md                    ← Você está aqui
-├── RESUMO-DO-PROJETO.txt        ← Leitura rápida
-├── 00-LEIA-PRIMEIRO.txt         ← Orientação inicial
-├── playwright.config.ts         ← Configuração do Playwright
-├── package.json                 ← Dependências e scripts
-├── tests/                       ← Suite de testes automatizados
-├── docs/
-│   ├── escopo.md                ← Escopo e decisões de cobertura
-│   ├── estrategia.md            ← Abordagem de automação
-│   └── guia-de-revisao.md       ← Trilha pra avaliadores
-├── execution-reports/           ← Relatório da rodada executada
-└── evidence/                    ← Screenshots e saídas da execução
-```
-
----
-
-## Escopo atual vs. próximas fases
-
-| Coberto agora | Planejado para próximas fases |
-|---|---|
-| ✅ Navegação e home | ⏳ Page Object Model |
-| ✅ Busca por produto | ⏳ Comparação de produtos |
-| ✅ Login/Logout | ⏳ Favoritos |
-| ✅ Checkout completo | ⏳ Múltiplos navegadores |
-| ✅ Cenário negativo de login | ⏳ CI/CD com GitHub Actions |
-| | ⏳ Regressão ampliada |
 
 ---
 
 ## Como revisar
 
-1. **[RESUMO-DO-PROJETO.txt](RESUMO-DO-PROJETO.txt)** — Visão geral rápida
-2. **[docs/guia-de-revisao.md](docs/guia-de-revisao.md)** — Trilha de leitura
-3. **[tests/](tests/)** — Código dos testes
-4. **[execution-reports/](execution-reports/)** — Relatório da rodada
-5. **[evidence/](evidence/)** — Evidências visuais
+1. Leia o [RESUMO-DO-PROJETO.txt](RESUMO-DO-PROJETO.txt)
+2. Consulte o [docs/guia-de-revisao.md](docs/guia-de-revisao.md)
+3. Revise os testes em [tests/](tests/)
+4. Confira o relatório em [execution-reports/](execution-reports/)
+5. Veja as evidências em [evidence/](evidence/)
 
 ---
 
-## O que este projeto demonstra
+## O que este projeto entrega
 
-- **Automação de fluxos críticos** — os cenários mais importantes do e-commerce estão cobertos
-- **TypeScript** — testes com tipagem forte, mais legíveis e manuteníveis
-- **Playwright** — framework moderno, multiplataforma, usado no mercado
-- **Execução reproduzível** — qualquer pessoa pode clonar e rodar em minutos
-- **Documentação integrada** — escopo, estratégia e evidências junto com o código
+- **Automação de fluxos críticos** — foco no que mais impacta o usuário
+- **Playwright com TypeScript** — stack moderna para automação web
+- **Cobertura objetiva** — smoke + cenário negativo
+- **Execução rápida** — qualquer avaliador pode clonar e rodar a suíte em poucos passos
