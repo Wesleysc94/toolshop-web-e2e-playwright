@@ -1,85 +1,147 @@
-# toolshop-web-e2e-playwright
+# 🌐 toolshop-web-e2e-playwright
 
-Projeto de automacao web E2E construido com Playwright sobre a aplicacao publica **Practice Software Testing**.
+> Suite de automação web E2E com Playwright cobrindo busca, autenticação e checkout.
 
-Este repositorio apresenta a primeira suite web do portfolio, com foco em navegacao, busca, autenticacao e checkout.
+[![Playwright](https://img.shields.io/badge/Playwright-TypeScript-2EAD33?logo=playwright&logoColor=white)]()
+[![Testes](https://img.shields.io/badge/Testes-5%20aprovados-brightgreen)]()
+[![Produto](https://img.shields.io/badge/Produto-Practice%20Software%20Testing-blue)](https://practicesoftwaretesting.com/)
 
-## Visao Geral
+📦 **Parte do portfolio:** [toolshop-quality-portfolio](https://github.com/Wesleysc94/toolshop-quality-portfolio)
 
-A proposta desta etapa foi mostrar:
+---
 
-- quais fluxos entraram na primeira fase
-- como a automacao foi organizada
-- o que foi validado na rodada inicial
-- como a execucao pode ser reproduzida
+## Objetivo
 
-## Aplicacao Sob Teste
+Automatizar os fluxos críticos de usuário da aplicação Practice Software Testing, validando que as funcionalidades essenciais (busca, autenticação, checkout) funcionam corretamente de ponta a ponta.
 
-- Base URL: https://practicesoftwaretesting.com/
-- API relacionada: https://api.practicesoftwaretesting.com
-- Referencia complementar: https://practiceautomatedtesting.com/api
+---
 
-## Escopo Da Etapa
+## Aplicação sob teste
 
-A cobertura inicial desta suite inclui:
+| Recurso | URL |
+|---|---|
+| Base URL | https://practicesoftwaretesting.com/ |
+| API relacionada | https://api.practicesoftwaretesting.com |
 
-- carregamento da home
-- busca por produto
-- abertura de detalhe de produto
-- login e logout
-- mensagem de erro no login invalido
-- adicao ao carrinho
-- checkout ate a confirmacao de pagamento
+---
 
-Ficaram fora desta fase:
+## Cobertura de testes
 
-- comparacao de produtos
-- favoritos
-- execucao em multiplos navegadores
-- CI
-- regressao ampliada
+### Smoke (4 testes)
 
-## Stack Utilizada
+| # | Cenário | Status |
+|---|---|---|
+| 1 | Carregamento da home e navegação | ✅ |
+| 2 | Busca por produto e abertura de detalhe | ✅ |
+| 3 | Login e logout com conta demo oficial | ✅ |
+| 4 | Checkout completo até confirmação de pagamento | ✅ |
 
-- `TypeScript`
-- `Playwright`
+### Negativo (1 teste)
 
-## Resultado Da Rodada
+| # | Cenário | Status |
+|---|---|---|
+| 5 | Mensagem de erro ao tentar login com credenciais inválidas | ✅ |
 
-Na execucao registrada em `2026-04-14`:
+### Resultado da rodada (2026-04-14)
 
-- `4` testes smoke foram aprovados
-- `1` teste negativo foi aprovado
-- `5` testes foram aprovados no total
-- a autenticacao foi validada com conta demo oficial
-- o fluxo feliz de checkout foi concluido com sucesso
+```
+  5 testes executados
+  5 aprovados
+  0 falhas
+  ────────────────
+  Taxa de aprovação: 100%
+```
 
-## Estrutura Do Repositorio
+---
 
-- [RESUMO-DO-PROJETO.txt](./RESUMO-DO-PROJETO.txt): leitura curta da etapa
-- [docs/](./docs/): escopo, estrategia e guia de revisao
-- [tests/](./tests/): suite automatizada com Playwright
-- [execution-reports/](./execution-reports/): relatorio da rodada executada
-- [evidence/](./evidence/): screenshots e saidas da execucao
+## Stack utilizada
 
-## Como Executar
+| Ferramenta | Uso |
+|---|---|
+| **Playwright** | Framework de automação web E2E |
+| **TypeScript** | Linguagem dos testes (tipagem forte) |
+| **npm** | Gerenciador de pacotes |
 
-1. Instale as dependencias com `npm install`.
-2. Rode `npx playwright install` se necessario.
-3. Rode `npm run test:smoke`.
-4. Rode `npm run test:negative`.
+---
 
-Comandos uteis:
+## Como executar
 
-- `npm run test:all`
-- `npx playwright test --headed`
-- `npx playwright test --ui`
-- `npm run report`
+**Pré-requisitos:** Node.js 18+ instalado.
 
-## Como Revisar
+```bash
+# 1. Clone o repositório
+git clone https://github.com/Wesleysc94/toolshop-web-e2e-playwright.git
+cd toolshop-web-e2e-playwright
 
-1. Comece por [RESUMO-DO-PROJETO.txt](./RESUMO-DO-PROJETO.txt).
-2. Leia [docs/guia-de-revisao.md](./docs/guia-de-revisao.md).
-3. Veja os testes em [tests/](./tests/).
-4. Consulte o relatorio em [execution-reports/2026-04-14-rodada-smoke-web-01.md](./execution-reports/2026-04-14-rodada-smoke-web-01.md).
-5. Confira as evidencias em [evidence/](./evidence/).
+# 2. Instale as dependências
+npm install
+
+# 3. Instale os navegadores do Playwright
+npx playwright install
+
+# 4. Execute os testes
+npm run test:smoke       # Roda os testes smoke
+npm run test:negative    # Roda os testes negativos
+npm run test:all         # Roda tudo
+```
+
+**Comandos úteis:**
+
+```bash
+npx playwright test --headed    # Executa com navegador visível
+npx playwright test --ui        # Abre a interface gráfica do Playwright
+npm run report                  # Abre o relatório HTML da última execução
+```
+
+---
+
+## Estrutura do repositório
+
+```
+toolshop-web-e2e-playwright/
+├── README.md                    ← Você está aqui
+├── RESUMO-DO-PROJETO.txt        ← Leitura rápida
+├── 00-LEIA-PRIMEIRO.txt         ← Orientação inicial
+├── playwright.config.ts         ← Configuração do Playwright
+├── package.json                 ← Dependências e scripts
+├── tests/                       ← Suite de testes automatizados
+├── docs/
+│   ├── escopo.md                ← Escopo e decisões de cobertura
+│   ├── estrategia.md            ← Abordagem de automação
+│   └── guia-de-revisao.md       ← Trilha pra avaliadores
+├── execution-reports/           ← Relatório da rodada executada
+└── evidence/                    ← Screenshots e saídas da execução
+```
+
+---
+
+## Escopo atual vs. próximas fases
+
+| Coberto agora | Planejado para próximas fases |
+|---|---|
+| ✅ Navegação e home | ⏳ Page Object Model |
+| ✅ Busca por produto | ⏳ Comparação de produtos |
+| ✅ Login/Logout | ⏳ Favoritos |
+| ✅ Checkout completo | ⏳ Múltiplos navegadores |
+| ✅ Cenário negativo de login | ⏳ CI/CD com GitHub Actions |
+| | ⏳ Regressão ampliada |
+
+---
+
+## Como revisar
+
+1. **[RESUMO-DO-PROJETO.txt](RESUMO-DO-PROJETO.txt)** — Visão geral rápida
+2. **[docs/guia-de-revisao.md](docs/guia-de-revisao.md)** — Trilha de leitura
+3. **[tests/](tests/)** — Código dos testes
+4. **[execution-reports/](execution-reports/)** — Relatório da rodada
+5. **[evidence/](evidence/)** — Evidências visuais
+
+---
+
+## O que este projeto demonstra
+
+- **Automação de fluxos críticos** — os cenários mais importantes do e-commerce estão cobertos
+- **TypeScript** — testes com tipagem forte, mais legíveis e manuteníveis
+- **Playwright** — framework moderno, multiplataforma, usado no mercado
+- **Execução reproduzível** — qualquer pessoa pode clonar e rodar em minutos
+- **Documentação integrada** — escopo, estratégia e evidências junto com o código
